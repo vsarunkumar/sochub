@@ -1,0 +1,21 @@
+
+.font_size
+{
+	font-size: 70px;
+}
+.nav-color-bg	 {
+	background-color: #337ab7;
+	max-width: 421px;
+	padding: right;
+}
+
+.nav-color-a
+{
+	color: #eeeeee;
+}
+
+.padding-left-right-zero
+{
+	padding-left: 0px;
+  padding-right: 0px;
+}

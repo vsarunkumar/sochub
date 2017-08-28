@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app='sochub'>
+  <head>
+    <title>Sochub</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+      <div class='panel panel-primary'>
+        <div class='panel-heading'> 
+          <span class="notice"><%= notice %></span>
+          <span class="alert"><%= alert %></span>
+          <div class="row">
+            <div class='col-md-4'>
+               <%= image_tag("soc.jpg", width: '60%', height: '85') %>
+            </div>
+            <div class="col-md-4"></div>
+            <div class='col-md-4 nav-color-bg'>
+                      <div id="navbar">
+                      <ul class="nav navbar-nav pull-right">
+                        <li><%= link_to 'Devise Demo', root_path, class: 'nav-color-a navbar-brand' %></li>
+                        <li><%= link_to 'Home', root_path, class: 'nav-color-a navbar-brand' %></li>
+                        <li><%= link_to 'Log In', new_user_session_path, class: 'nav-color-a navbar-brand' %></li>
+                        <li><%= link_to 'Sign Up', new_user_registration_path, class: 'nav-color-a navbar-brand' %></li>
+                      </ul>
+                    </div>
+            </div>
+          </div>
+                    
+
+                    
+        </div>
+
+        <%= yield %>
+
+        <div class="panel-footer"></div>
+
+      </div>
+    </div>
+  </body>
+</html>
