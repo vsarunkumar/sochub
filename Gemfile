@@ -40,6 +40,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bower-rails'
 gem 'angular-rails-templates'
 
+gem 'dotenv-rails', :groups => [:development, :test]
+
 gem 'devise'
 
 group :development, :test do
