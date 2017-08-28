@@ -41,6 +41,7 @@ gem 'bower-rails'
 gem 'angular-rails-templates'
 
 gem 'dotenv-rails', :groups => [:development, :test]
+gem 'pry-rails', group: [:development, :test]
 
 gem 'devise'
 
