@@ -44,6 +44,10 @@ gem 'dotenv-rails', :groups => [:development, :test]
 gem 'pry-rails', group: [:development, :test]
 
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'omniauth-linkedin'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
