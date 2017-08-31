@@ -12,18 +12,12 @@ sochub.config([
 	    .when('/soclogin', {
 	    	templateUrl: 'home/soclogin.html',
 	    	controller: 'SocloginController'
-	    });
+	    })
+	    .when('/fblogin', {
+	    	templateUrl: 'home/soclogin.html',
+	    	controller: 'SocloginController'
+	    });;
   }
 ]);
 
-sochub.controller("HomeController", ['$scope', '$location', function($scope, $location) {
-	$scope.soclogin = function() {
-  	$location.path('/soclogin')
-}
-}]);
 
-sochub.controller("SocloginController", ['$scope', function($scope) {
-	$scope.soclogin = function() {
-  //return $location.path("/soclogin");
-}
-}]);
