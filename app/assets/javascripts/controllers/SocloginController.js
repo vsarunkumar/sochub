@@ -8,4 +8,8 @@ sochub.controller("SocloginController", ['$scope', '$resource', '$location', '$w
 	$scope.twitter_login_url = root_url + '/auth/twitter';
 	$scope.linkedin_login_url = root_url + '/auth/linkedin';
 
+	$scope.postForm = function(){
+		$location.path('/post')
+	}
+
 }]);

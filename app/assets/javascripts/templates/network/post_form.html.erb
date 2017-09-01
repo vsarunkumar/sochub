@@ -29,21 +29,35 @@
     </div>
     <div class='col-md-5'>
       <div class='row'>
-      	<div class='col-md-4'>
-      		<%= image_tag("fb.png", width: '100%', height: '75') %>
-      		<h4> <a ng-href= "{{fb_login_url}}"> CONNECT </a> </h4>
-      		<h4> <a ng-href= "{{fb_logout_url}}"> DISCONNECT </a> </h4>
-      	</div>
-      	<div class='col-md-4'>
-          <%= image_tag("twitter.jpg", width: '100%', height: '75') %>
-      		<h4> <a ng-href= "{{twitter_login_url}}"> CONNECT </a> </h4>
-      		<h4> <a ng-href= "{{twitter_logout_url}}"> DISCONNECT </a> </h4>
-      	</div>
-      	<div class='col-md-4'>
-          <%= image_tag("linkedin.png", width: '100%', height: '75') %>
-      		<h4> <a ng-href= "{{linkedin_login_url}}"> CONNECT </a> </h4>
-      		<h4> <a ng-href= "{{linkedin_logout_url}}"> DISCONNECT </a> </h4>
-      	</div>
+      	
+
+
+      		<form class="form-horizontal" role="form" class="edit-user">
+					  <div class="form-group" ng-class="{'has-warning has-feedback':errors.name}">
+					    <div class="col-md-12">
+					      <textarea name="post" class="form-control" cols="5" rows="10" ng-model="post">
+					      </textarea>
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <div class="col-md-offset-3 col-md-3">
+					      <button class="btn btn-default" ng-click="cancel()"> Cancel</button>
+					    </div>
+					    <div class="col-md-3 text-right">
+					      <button class="btn btn-primary" ng-click="save()"> Post </button>
+					    </div>
+					  </div>
+
+
+
+
+
+
+
+
+
+
+
       </div>
     </div>
     <div class='col-md-3'>

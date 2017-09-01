@@ -16,7 +16,11 @@ sochub.config([
 	    .when('/fblogin', {
 	    	templateUrl: 'home/soclogin.html',
 	    	controller: 'SocloginController'
-	    });;
+	    })
+	    .when('/post', {
+	    	templateUrl: 'network/post_form.html',
+	    	controller: 'PostController'
+	    });
   }
 ]);
 
