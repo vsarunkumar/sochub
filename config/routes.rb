@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :social_media, only: :index
 
-  resources :post, only: :create
+  resources :post, only: [:create, :index]
 
   get 'auth/facebook/callback' => 'facebook#create'
   get 'auth/twitter/callback' => 'twitter#create'

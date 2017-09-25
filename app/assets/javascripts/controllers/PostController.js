@@ -1,27 +1,21 @@
 
-sochub.controller('PostController', ['$scope', '$resource', '$window', '$http', '$location',
-		function($scope, $resource, $window, $http, $location){
-		$scope.save =  function(){
+sochub.controller('PostController', ['$scope', '$resource', '$window', '$http', '$location', 'Post',
+    function($scope, $resource, $window, $http, $location, Post){
 
-				var post = $http({
+        $scope.posts = Post.index();
+        
+		$scope.save =  function(){
+			$http({
                 method: "POST",
                 url: "/post",
                 dataType: 'json',
                 data: { post: $scope.post },
                 headers: { "Content-Type": "application/json" }
             });
- 
-            post.success(function (data, status) {
-                $window.alert("Hello: " + data.name + " .\nCurrent Date and Time: " + data.DateTime);
-            });
- 
-            post.error(function (data, status) {
-                $window.alert(data.Message);
-            });
           }
 
         $scope.soclogin = function() {
-            $location.path('/soclogin')
+            $location.path('/soclogin');
         }
 
 }]);
