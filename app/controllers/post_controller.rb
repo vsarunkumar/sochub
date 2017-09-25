@@ -1,4 +1,8 @@
 class PostController < ApplicationController
+  def index
+    render json: Post.all
+  end
+
   def create
     social_post = current_user.posts
                               .create(message: params[:post],
